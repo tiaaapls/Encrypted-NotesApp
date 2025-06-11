@@ -1,0 +1,481 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+/* ===== BODY & CONTAINER ===== */
+body {
+  padding: 0;
+  margin: 0;
+  background: #e9f7fa; 
+}
+
+.container {
+  display: flex;
+  width: 90%;
+  background: white;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+/* ===== NAVBAR ===== */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #2c6b70;
+  padding: 15px 30px;
+  color: white;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+/* ===== NAVBAR ===== */
+.navbar-left {
+  display: flex;
+  align-items: center;
+  gap: 40px; 
+}
+
+/* ===== LOGO ===== */
+.navbar .logo h2 {
+  margin: 0;
+  font-size: 24px;
+  font-weight: bold;
+}
+
+/* ===== NAV LINKS ===== */
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 10px; 
+  margin: 0;
+  padding: 0;
+}
+
+.nav-links li a {
+  text-decoration: none;
+  color: white;
+  font-size: 16px;
+  font-weight: 600;
+  padding: 8px 14px;
+  border-radius: 5px;
+  transition: background-color 0.3s;
+}
+
+.nav-links li a:hover {
+  background-color: #296367;
+}
+
+/* ===== LOGOUT BUTTON ===== */
+.logout {
+  background-color: red;
+  border: none;
+  padding: 8px 16px;
+  color: white;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background-color 0.3s;
+  white-space: nowrap;     
+  width: auto;             
+  max-width: 200px;        
+}
+
+.logout:hover {
+  background-color: darkred;
+}
+
+/* ===== MAIN CONTENT ===== */
+.main-content {
+  padding: 40px;
+  background-color: #e9f7fa;
+  min-height: 100vh;
+  color: #333;
+}
+
+h1 {
+  color: white;
+}
+
+h2 {
+  color: #2c6b70;
+}
+
+/* ===== DASHBOARD SUMMARY ===== */
+.dashboard-summary {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap; 
+  margin-top: 40px;
+  justify-content: center; 
+}
+
+.dashboard-card {
+  background-color: #ffffff;
+  padding: 40px 50px;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  flex: 1;
+  min-width: 300px;
+  max-width: 350px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.dashboard-card h3 {
+  margin-bottom: 10px;
+  color: #2c6b70;
+  font-size: 20px;
+}
+
+.dashboard-card p {
+  font-size: 36px;
+  font-weight: bold;
+  color: #2c6b70;
+  margin: 0;
+}
+
+#welcomeMsg {
+  font-size: 36px;
+  font-weight: bold;
+  color: #2c6b70;
+  text-align: center;
+  margin-top: 40px;
+}
+
+/* ===== LOGIN & REGISTER FORM ===== */
+#loginForm, #registerForm {
+  max-width: 400px;
+  background: #ffffff;
+  margin: 80px auto;
+  padding: 32px 24px;
+  border-radius: 16px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+}
+
+#loginForm .form-title,
+#registerForm .form-title {
+  font-size: 1.8rem;
+  font-weight: 600;
+  text-align: center;
+  margin-bottom: 24px;
+  color: #333;
+}
+
+#loginForm .input-group,
+#registerForm .input-group {
+  margin-bottom: 20px;
+}
+
+#loginForm .input-wrapper,
+#registerForm .input-wrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+  background: #f1f7fe;
+  border-radius: 8px;
+  padding: 10px;
+}
+
+#loginForm .input-icon,
+#registerForm .input-icon {
+  width: 24px;
+  height: 24px;
+  color: #2c6b70;
+  margin-right: 10px;
+}
+
+#loginForm .form-input,
+#registerForm .form-input {
+  border: none;
+  background: transparent;
+  outline: none;
+  flex: 1;
+  font-size: 16px;
+  color: #333;
+}
+
+#loginForm .submit-button,
+#registerForm .submit-button {
+  width: 100%;
+  background-color: #2c6b70;
+  color: #fff;
+  border: none;
+  border-radius: 24px;
+  padding: 12px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+#loginForm .submit-button:hover,
+#registerForm .submit-button:hover {
+  background-color: #36787d;
+}
+
+#loginForm .button-glow,
+#registerForm .button-glow {
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: rgba(255, 255, 255, 0.2);
+  transition: left 0.5s ease;
+}
+
+#loginForm .submit-button:hover .button-glow,
+#registerForm .submit-button:hover .button-glow {
+  left: 0;
+}
+
+.form-footer {
+  margin-top: 16px;
+  text-align: center;
+  font-size: 14px;
+}
+
+#loginForm .login-link,
+#registerForm .login-link {
+  color: #666;
+  text-decoration: none;
+}
+
+#loginForm .login-link span,
+#registerForm .login-link span {
+  color: #2c6b70;
+  font-weight: 600;
+}
+
+#loginForm .login-link:hover span,
+#registerForm .login-link:hover span {
+  text-decoration: underline;
+}
+
+/* ===== TABLE STYLING ===== */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  background: white;
+  border-radius: 10px;
+  overflow: hidden;
+  padding: 30px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+th, td {
+  padding: 10px;
+  text-align: center;
+  border-bottom: 1px solid #ddd;
+  vertical-align: middle;
+}
+
+th {
+  background: #3a8289;
+  color: white;
+  text-align: center;
+  font-weight: bold;
+}
+
+td {
+  color: black;
+  min-height: 40px;
+}
+
+tbody tr:hover {
+  background: #f1f1f1;
+}
+
+/* ===== BUTTON STYLING ===== */
+#addNoteBtn {
+  margin-bottom: 15px; 
+  padding: 8px 16px;
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  width: fit-content; 
+  display: block;
+}
+
+.btn {
+  padding: 6px 10px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: bold;
+  width: auto;
+  display: inline-block;
+  text-align: center;
+  min-width: 80px;
+}
+
+.btn-decrypt {
+  background: #007bff;
+  color: white;
+}
+
+.btn-decrypt:hover {
+  background: #0056b3;
+}
+
+.btn-delete {
+  background: red;
+  color: white;
+}
+
+.btn-delete:hover {
+  background: darkred;
+}
+
+td .btn {
+  margin: 2px;
+  display: inline-block;
+}
+
+.btn-container {
+  display: flex;
+  justify-content: center; 
+  gap: 10px; 
+}
+
+button {
+  margin-top: 15px;
+  width: 100%;
+  padding: 10px;
+  background-color: #2563eb;
+  border: none;
+  color: white;
+  font-weight: bold;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+/* ===== FORMULIR ===== */
+.card-container {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  padding: 40px 20px;
+  background-color: #eaf8fb; 
+}
+
+.card {
+  background: #eaf8fb; 
+  border: 2px solid #b5dfe7; 
+  border-radius: 12px;
+  padding: 30px;
+  box-shadow: none; 
+  width: 100%;
+  margin: 0 auto;
+  box-sizing: border-box;
+}
+
+.card h2 {
+  margin-top: 0;
+  margin-bottom: 20px;
+  color: #2c6b70;
+  font-weight: bold;
+}
+
+form {
+  background-color: white;
+  padding: 30px;
+  border-radius: 12px;
+  width: 100%;
+  max-width: 500px;
+  color: #2c3e50;
+  margin: 40px auto;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+}
+
+form label {
+  display: block;
+  margin-top: 20px;
+  margin-bottom: 6px;
+  font-weight: 600;
+  font-size: 15px;
+  color: #2c3e50;
+}
+
+form input,
+form textarea {
+  width: 100%;
+  padding: 12px;
+  border-radius: 6px;
+  background-color: #f1f5f9;
+  border: 1px solid #d1d5db;
+  font-size: 14px;
+  color: #111827;
+  outline: none;
+  transition: border 0.2s;
+}
+
+form input:focus,
+form textarea:focus {
+  border: 1px solid #2563eb;
+  background-color: #fff;
+}
+
+form button {
+  margin-top: 25px;
+  width: 100%;
+  padding: 12px;
+  background-color: #2563eb;
+  border: none;
+  color: white;
+  font-weight: bold;
+  font-size: 14px;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+form button:hover {
+  background-color: #1e4dd8;
+}
+
+.modal {
+  position: fixed;
+  z-index: 999;
+  left: 0; top: 0;
+  width: 100%; height: 100%;
+  background-color: rgba(0,0,0,0.5);
+}
+
+.modal-content {
+  background: #fff;
+  margin: 15% auto;
+  padding: 20px;
+  width: 300px;
+  border-radius: 8px;
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 660px) {
+  #loginForm {
+    margin: 40px 20px;
+  }
+
+  form {
+    padding: 20px;
+    width: 90%;
+  }
+
+  .settings .menu {
+    transform: scale(1); 
+  }
+}

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Halaman Dekripsi</title>
+  <link rel="stylesheet" href="assets/style.css" />
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/4.1.1/crypto-js.min.js"></script>
+</head>
+
+<body>
+  <nav class="navbar">
+    <div class="navbar-left">
+      <div class="logo">
+        <h1>NOTES</h1>
+      </div>
+      <ul class="nav-links">
+        <li><a href="dashboard.html">Dashboard</a></li>
+        <li><a href="enkripsi.html">Enkripsi</a></li>
+        <li><a href="dekripsi.html" class="active">Dekripsi</a></li>
+      </ul>
+    </div>
+    <button class="logout">Logout</button>
+  </nav>
+
+  <div class="main-content">
+    <div class="card-container">
+      <div class="card">
+        <h2>Data Dekripsi</h2>
+        <table>
+          <thead>
+            <tr>
+              <th>No</th>
+              <th>Nama</th>
+              <th>Status</th>
+              <th>Tanggal</th>
+              <th>Aksi</th>
+            </tr>
+          </thead>
+          <tbody id="notesTable">
+            <!-- Data akan dimuat melalui JS -->
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+
+  <script src="assets/js/decryption.js"></script>
+  <script src="assets/js/encryption.js"></script>
+  <script src="assets/js/main.js"></script>
+  <script src="assets/js/auth.js"></script>
+  
+</body>
+</html>
